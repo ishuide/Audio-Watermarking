@@ -439,16 +439,7 @@ def act1_the_machine():
     with sc1:
         min_sec = st.session_state.config.min_audio_seconds
         st.info(f"💡 Recommended duration: >{min_sec:.1f}s")
-        rec_dur = st.slider("Recording Duration (s)", 2, 30, 15)
-        if st.button("🎤 Record Source"):
-            with st.spinner("Recording..."):
-                fs = 44100
-                rec = sd.rec(int(rec_dur * fs), samplerate=fs, channels=1)
-                sd.wait()
-                st.session_state.audio = to_canonical(rec.flatten(), fs, st.session_state.config)
-                st.session_state.wm_audio = None
-                st.session_state.attacked_audio = None
-            st.success("Captured.")
+        st.info("�️ Microphone recording is disabled in the web version for security and compatibility. Please use the **Upload** option on the right to process your audio.")
     with sc2:
         uploaded = st.file_uploader("Upload Audio (WAV)", type=["wav"])
         if uploaded:
