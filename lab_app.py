@@ -4,7 +4,6 @@ from openai import OpenAI
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyArrowPatch
-import sounddevice as sd
 import soundfile as sf
 import hashlib
 import time
