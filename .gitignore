@@ -1,0 +1,33 @@
+# Streamlit Cloud Deployment
+.streamlit/
+secrets.toml
+
+# Exclude as per user request
+explanation/
+
+# Temporary Audio Files
+_tmp_*.wav
+*.wav
+*.mp3
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+.env
+venv/
+gpu_env/
+
+# Data/Output
+output/
+logs/
+watermarked/
+attacked/
+original/
+keys/
+
+# Other deployment configs
+vercel.json
+render.yaml
+run.sh

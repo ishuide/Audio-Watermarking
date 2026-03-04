@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "audio_warp"
+version = "1.0.0"
+description = "Audio watermarking and authentication framework using spread-spectrum embedding, Reed-Solomon ECC, and Ed25519 cryptography"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "soundfile>=0.12",
+    "cryptography>=41.0",
+    "reedsolo>=1.7",
+    "matplotlib>=3.5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+audio-warp = "audio_warp.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
